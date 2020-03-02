@@ -33,3 +33,7 @@ $showinc;.1;+;@;:showinc
 `showinc
 #=> 4
 ~
+# _ swaps the first two stack elements
+.7;.8;@;_:@;~;~
+# => 8
+# => 7
