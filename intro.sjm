@@ -1,0 +1,35 @@
+#hello world
+."Hello World";@;~
+#or, this could be written as
+."Hello World"
+@
+~
+#dot adds to the stack
+.4
+.6
+#math exists
+*
+#@ outputs the top value
+@
+# => 24
+#~ removes the top off the stack
+~
+.1;.2;@
+# => 2
+@
+# => 2
+~;@;~
+# => 1
+@
+# => \
+#\ means nil
+#math included +-*/%
+.25;.3;%;@;~
+# => 1
+# $ begins a function, : ends it
+$showinc;.1;+;@;:showinc
+# ` calls a function
+.3
+`showinc
+#=> 4
+~
