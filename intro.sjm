@@ -1,6 +1,4 @@
 #hello world
-."Hello World";@;~
-#or, this could be written as
 ."Hello World"
 @
 ~
@@ -14,29 +12,65 @@
 # => 24
 #~ removes the top off the stack
 ~
-.1;.2;@
+.1
+.2
+@
 # => 2
 @
 # => 2
-~;@;~
+~
+@
+~
 # => 1
 @
 # => \
 #\ means nil
 #math included +-*/%&|!=<>
-.25;.3;%;@;~
+.25
+.3
+%
+@
+~
 # => 1
 # $ begins a function, : ends it
-$showinc;.1;+;@;:showinc
-# ` calls a function
-.3
-`showinc
-#=> 4
+$showinc
+.1
++
+@
 ~
+:showinc
+# ; calls a function
+.3
+;showinc
+#=> 4
 # _ swaps the first two stack elements
-.7;.8;@;_:@;~;~
+.7
+.8
+@
+_
+@
+~
+~
 # => 8
 # => 7
 # [ moves the bottom to the top, ] does the reverse
-.6;.7;.8;[;@;~;~;~
+.6
+.7
+.8
+[
+@
+~
+~
+~
 # => 6
+# ^something adds something to the stack if the current top of the stack is 1 (true)
+.0
+^Nope
+@
+.1
+^Yes
+@
+~
+~
+~
+# => Yes
