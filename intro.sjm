@@ -23,7 +23,7 @@
 @
 # => \
 #\ means nil
-#math included +-*/%
+#math included +-*/%&|!=<>
 .25;.3;%;@;~
 # => 1
 # $ begins a function, : ends it
@@ -37,3 +37,6 @@ $showinc;.1;+;@;:showinc
 .7;.8;@;_:@;~;~
 # => 8
 # => 7
+# [ moves the bottom to the top, ] does the reverse
+.6;.7;.8;[;@;~;~;~
+# => 6
