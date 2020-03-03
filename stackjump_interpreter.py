@@ -119,6 +119,14 @@ while not done:
         numa=stack[len(stack)-1]
         del stack[len(stack)-1]
         stack.append((1,0)[numa==1])
+    elif cl.startswith("^"):
+        numa=stack[len(stack)-1]
+        if numa==1:
+            retloc=fline
+            fname=cl[1:].strip()
+            fnloc=rtns[fname]
+            fline=rtns[fname]
+            #print("Running: "+str(fname)+" at "+str(rtns[fname]))
     elif cl.startswith("$"):
         fname=cl[1:].strip()
         rtns[fname]=fline
