@@ -63,14 +63,15 @@ _
 ~
 ~
 # => 6
-# ^something adds something to the stack if the current top of the stack is 1 (true)
+# ^something runs something to the stack if the current top of the stack is 1 (true)
+.8
 .0
-^Nope
-@
+^showinc
+~
+~
 .1
-^Yes
-@
+^showinc
 ~
 ~
 ~
-# => Yes
+# => 9
