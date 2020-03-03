@@ -16,13 +16,18 @@ rtns={}
 done=False
 fline=0
 fnloc=-1
+retloc=-1
+
+cfd=cf.readlines()
+cfd.append(" ")
+
 while not done:
-    cl=cf.readline()
+    cl=cfd[fline]
+    fline+=1
     #print("Current line: "+cl)
     #print("Stack is: "+str(stack))
     #print("Funcs are: "+str(rtns))
     #print("Funcloc is: "+str(fnloc))
-    fline+=1
     if fnloc==-2:
         if cl.startswith(":"+fname):
             fnloc=-1
@@ -85,11 +90,15 @@ while not done:
         rtns[fname]=fline
         fnloc=-2
     elif cl.startswith(";"):
+        retloc=fline
         fname=cl[1:].strip()
         fnloc=rtns[fname]
-        cf.seek(rtns[fname])
         fline=rtns[fname]
         #print("Running: "+str(fname)+" at "+str(rtns[fname]))
+    elif cl.startswith(":"):
+        fnloc=-1
+        fline=retloc
+        continue
     else:
         if cl.startswith(":"):
                 continue
