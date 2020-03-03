@@ -33,7 +33,7 @@ while not done:
             fnloc=-1
         continue
     if cl.startswith("."):
-        data=cl[1:]
+        data=cl[1:].strip()
         if (data == "\\"):
             stack.append(None)
             continue
@@ -85,6 +85,40 @@ while not done:
         del stack[len(stack)-1]
         del stack[len(stack)-1]
         stack.append(numa%numb)
+    elif cl.startswith("="):
+        numa=stack[len(stack)-1]
+        numb=stack[len(stack)-2]
+        del stack[len(stack)-1]
+        del stack[len(stack)-1]
+        stack.append((0,1)[numa==numb])
+    elif cl.startswith(">"):
+        numa=stack[len(stack)-1]
+        numb=stack[len(stack)-2]
+        del stack[len(stack)-1]
+        del stack[len(stack)-1]
+        stack.append((0,1)[numa==numb])
+    elif cl.startswith("<"):
+        numa=stack[len(stack)-1]
+        numb=stack[len(stack)-2]
+        del stack[len(stack)-1]
+        del stack[len(stack)-1]
+        stack.append((0,1)[numa==numb])
+    elif cl.startswith("&"):
+        numa=stack[len(stack)-1]
+        numb=stack[len(stack)-2]
+        del stack[len(stack)-1]
+        del stack[len(stack)-1]
+        stack.append((0,1)[(numa==1) and (numb==1)])
+    elif cl.startswith("|"):
+        numa=stack[len(stack)-1]
+        numb=stack[len(stack)-2]
+        del stack[len(stack)-1]
+        del stack[len(stack)-1]
+        stack.append((0,1)[(numa==1) or (numb==1)])
+    elif cl.startswith("!"):
+        numa=stack[len(stack)-1]
+        del stack[len(stack)-1]
+        stack.append((1,0)[numa==1])
     elif cl.startswith("$"):
         fname=cl[1:].strip()
         rtns[fname]=fline
