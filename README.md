@@ -5,6 +5,8 @@ a stack based but also functional language
 
 only symbols, no keywords to remember
 
+\.\@\~\_\+\-\*\/\%\&\|\!\\\$\:\;\^\[\]
+
 \.
 
 PUT: Puts a value to the stack
