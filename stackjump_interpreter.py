@@ -55,6 +55,12 @@ while not done:
         stack[len(stack)-1]=totop
         stack[len(stack)-2]=tosec
         continue
+    elif cl.startswith("["):
+        totop=stack[0]
+        del stack[0]
+        stack.append(totop)
+    elif cl.startswith("]"):
+        stack.append(len(stack))
     elif cl.startswith("+"):
         numa=stack[len(stack)-1]
         numb=stack[len(stack)-2]
