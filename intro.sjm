@@ -58,11 +58,19 @@ _
 .7
 .8
 [
+[
 @
 ~
 ~
 ~
 # => 6
+# ] gets the height of the stack and adds it to the stack
+.0
+]
+@
+~
+~
+#=> 2
 # ^something runs something to the stack if the current top of the stack is 1 (true)
 .8
 .0
