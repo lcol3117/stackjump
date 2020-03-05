@@ -53,7 +53,7 @@ _
 ~
 # => 8
 # => 7
-# [ moves the bottom to the top, ] does the reverse
+# [ moves the bottom to the top, but note that the stack starts with a \
 .6
 .7
 .8
