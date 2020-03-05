@@ -7,76 +7,76 @@ only symbols, no keywords to remember
 
 \.
 
-PUT
+PUT: Puts a value to the stack
 
 \@
 
-RET
+RET: Returns the top value over stdout
 
 \~
 
-REM
+REM: Removes the top value of the stack
 
 \_
 
-SWP
+SWP: Swaps the top two elements on the stack
 
 \+
 
-ADD
+ADD: Adds the top two elements, removes them, and adds the result
 
 \-
 
-SUB
+SUB: Subtracts instead of adding
 
 \*
 
-MLT
+MLT: Multiplies instead of subtracting
 
 \/
 
-DIV
+DIV: Divides instead of multiplying
 
 \%
 
-MOD
+MOD: Modulo instead of dividing
 
 \&
 
-AND
+AND: AND gate (logical)
 
 \|
 
-LOR
+LOR: Logical OR gate
 
 \!
 
-NOT
+NOT: NOT gate (Logical)
 
 \\
 
-NIL
+NIL: The nil, null, or None value
 
 \$
 
-DEF
+DEF: Defines a function
 
 \:
 
-END
+END: Ends a function definition
 
 \;
 
-RUN
+RUN: Runs a function
 
 \^
 
-RIF
+RIF: Runs if the top value of the stack is 1
 
 \[
 
-CYC
+CYC: Cycles the bottom value to the new top value of the stack
 
 \]
 
-LEN
+LEN: Length of the stack is added to the stack
