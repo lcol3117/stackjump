@@ -125,6 +125,9 @@ while not done:
         numa=stack[len(stack)-1]
         del stack[len(stack)-1]
         stack.append((1,0)[numa==1])
+    elif cl.startswith("{"):
+        stack.append(stack[len(stack)-1])
+        continue
     elif cl.startswith("^"):
         numa=stack[len(stack)-1]
         if numa==1:
