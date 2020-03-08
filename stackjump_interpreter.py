@@ -24,10 +24,11 @@ cfd.append(" ")
 while not done:
     cl=cfd[fline]
     fline+=1
-    #print("Current line: "+cl)
-    #print("Stack is: "+str(stack))
-    #print("Funcs are: "+str(rtns))
-    #print("Funcloc is: "+str(fnloc))
+    print("---")
+    print("Current line: "+cl.strip())
+    print("Stack is: "+str(stack))
+    print("Funcs are: "+str(rtns))
+    print("Funcloc is: "+str(fnloc))
     if fnloc==-2:
         if cl.startswith(":"+fname):
             fnloc=-1
@@ -135,7 +136,7 @@ while not done:
             fname=cl[1:].strip()
             fnloc=rtns[fname]
             fline=rtns[fname]
-            #print("Running: "+str(fname)+" at "+str(rtns[fname]))
+            print("Running: "+str(fname)+" at "+str(rtns[fname]))
     elif cl.startswith("$"):
         fname=cl[1:].strip()
         rtns[fname]=fline
@@ -145,10 +146,10 @@ while not done:
         fname=cl[1:].strip()
         fnloc=rtns[fname]
         fline=rtns[fname]
-        #print("Running: "+str(fname)+" at "+str(rtns[fname]))
+        print("Running: "+str(fname)+" at "+str(rtns[fname]))
     elif cl.startswith(":"):
         fnloc=-1
-        fline=retloc
+        fline=retloc+1
         continue
     else:
         if cl.startswith(":"):
