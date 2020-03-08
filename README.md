@@ -5,7 +5,7 @@ a stack based but also functional language
 
 only symbols, no keywords to remember
 
-\.\@\~\_\+\-\*\/\%\&\|\!\\\$\:\;\^\[\]
+\.\@\~\_\+\-\*\/\%\&\|\!\\\$\:\;\^\[\]\{
 
 \.
 
@@ -82,3 +82,7 @@ CYC: Cycles the bottom value to the new top value of the stack
 \]
 
 LEN: Length of the stack is added to the stack
+
+\{
+
+DUP: Duplicates the value on the top of the stack
